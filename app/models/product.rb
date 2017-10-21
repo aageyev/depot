@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id          :integer          not null, primary key
+#  title       :string(255)
+#  description :text(65535)
+#  image_url   :string(255)
+#  price       :decimal(8, 2)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#
+
 class Product < ApplicationRecord
   has_many :line_items
   before_destroy :ensure_not_referenced_by_any_line_item
