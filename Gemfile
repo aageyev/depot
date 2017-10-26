@@ -15,10 +15,11 @@ gem 'coffee-rails',            '4.2.2'
 gem 'turbolinks',              '5.0.1'
 gem 'jbuilder',                '2.7.0'
 gem 'webpacker',               '3.0.2'
+gem 'bcrypt',                  '3.1.11'
 
 # gem 'therubyracer', platforms: :ruby
 # gem 'redis', '~> 3.0'
-# gem 'bcrypt', '~> 3.1.7'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
