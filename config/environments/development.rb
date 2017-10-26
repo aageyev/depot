@@ -27,6 +27,17 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # config.action_mailer.delivery_method = :test
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              ENV["JangoSMTP_address"],
+    port:                 ENV["JangoSMTP_port"],
+    domain:               'siple-site1.com',
+    authentication:       "plain",
+    user_name:            ENV["JangoSMTP_user"],
+    password:             ENV["JangoSMTP_pass"],
+    enable_starttls_auto: true
+  }
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
